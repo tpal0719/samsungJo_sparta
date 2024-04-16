@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,13 @@ body {
     margin-bottom: 10px;
 }
 
+.font {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    margin: 0;
+}
+
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -36,4 +43,21 @@ body {
     width: 160px;
     margin-bottom: 45px;
     animation: bounce 2s infinite;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+a:link {
+    color : black;
+  }
+  a:visited {
+    color : black;
+  }
+  a:hover {
+    color : blue;
+  }
+  a:active {
+    color : black;
 }
