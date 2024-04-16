@@ -1,23 +1,23 @@
 body {
-    background-color: rgb(255, 255, 255); /* 배경색을 검정색으로 설정 */
+    background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center; /* 내용을 수평 중앙에 배치 */
-    align-items: center; /* 내용을 수직 중앙에 배치 */
-    height: 100vh; /* 화면 높이의 100% */
-    margin: 0; /* body의 기본 마진 제거 */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    text-align: center; /* 내용 가운데 정렬 */
+    text-align: center;
 }
 
 .samsung-logo {
-    display: inline-block; /* 요소들을 인라인 블록으로 설정하여 수평 정렬 */
+    display: inline-block;
 }
 
 .logo {
-    width: 160px; /* 이미지의 너비 조정 */
-    margin-bottom: 10px; /* 로고 이미지와 로고 폰트 사이의 간격 설정 */
+    width: 160px;
+    margin-bottom: 10px;
 }
 
 @keyframes bounce {
@@ -33,7 +33,7 @@ body {
 }
 
 .bounce {
-    width: 160px; /* 이미지의 너비 조정 */
-    margin-bottom: 45px; /* 로고 이미지와 로고 폰트 사이의 간격 설정 */
-    animation: bounce 2s infinite; /* 애니메이션 반복 */
+    width: 160px;
+    margin-bottom: 45px;
+    animation: bounce 2s infinite;
 }
