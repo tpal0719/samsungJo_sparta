@@ -1,20 +1,10 @@
-
-a {
-    text-decoration: none;
-}
-
-.main_content {
-
-}
-
-
-.card-img {
+img{
     width: 200px;
     height: 200px;
     border: 1px solid black;
     transition: all 0.1s;
 }
-
-.card {
-
+a{
+    text-decoration: none;
 }
+
