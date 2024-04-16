@@ -1,0 +1,33 @@
+.onepoint {
+    background-color: green;
+    text-align: center;
+    font-size: 200%;
+}
+
+.textbox {
+    
+
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    font-size: 25pt;
+}
+
+.profile{
+    position: relative;
+    left: 3%;
+}
+
+.favorite{
+    text-align: center;
+    
+}
+
+.h2_title{
+    position: relative;
+    left: 3%;
+}
+
+.favorite>img{
+    margin: auto 25px auto 25px;
+}
