@@ -1,0 +1,63 @@
+body {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.samsung-logo {
+    display: inline-block;
+}
+
+.logo {
+    width: 160px;
+    margin-bottom: 10px;
+}
+
+.font {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    margin: 0;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    width: 160px;
+    margin-bottom: 45px;
+    animation: bounce 2s infinite;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+a:link {
+    color : black;
+  }
+  a:visited {
+    color : black;
+  }
+  a:hover {
+    color : blue;
+  }
+  a:active {
+    color : black;
+}
