@@ -8,11 +8,21 @@
     <link rel="stylesheet" href="css/heder.css">
 </head>
 <body>
+<audio autoplay>
+    <source src="intro.mp3" type="audio/mpeg">
+    Your browser does not support the audio
+</audio>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var audio = document.getElementById("bgMusic");
+      audio.play();
+    });
+</script>
     <div class="container">
         <div class="S-logo">
+            <a href="index.html">
             <img src="img/S.png" alt="S Logo" class="bounce">
         </div>
-        <a href="index.html">
         <div>
             <span class="font">3</span>
             <span class="font">조</span>
