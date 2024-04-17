@@ -18,6 +18,34 @@ body {
     align-items: center;
     position: relative;
     margin: 0px;
+    width: 100%;
+}
+
+ .main-container {
+    position: relative;
+    display: inline-block;
+  }
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -220%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.team-h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    color: #00498c;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .wrapper {
@@ -39,25 +67,6 @@ body {
     margin: 5px;
     opacity: 0.4;
     transition: all .4s;
-}
-
-.team-item1 {
-    flex-basis: 160px;
-    flex-shrink: 0;
-    margin: 5px;
-    opacity: 0.4;
-    transition: all .4s;
-    position: relative;
-    z-index: 1;
-}
-
-.team-item1:hover {
-    opacity: 1;
-    flex-basis: 200px;
-    margin: 0 40px;
-    transform: scaleX(4) scaleY(2.2);
-    transform-origin: left;
-    transition: all .85s;
 }
 
 .team-item:hover {
