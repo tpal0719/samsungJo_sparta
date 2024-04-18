@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>팀원 소개 페이지</title>
+<style>
+    * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+}
+.script{
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight:400;
+    font-style: normal;
+}
+
+.scriptKR{
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#wrapper{
+    align-items: center;
+    min-height: 100vh;
+    width : 60%;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F0F0F0;
+}
+#main-content{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    margin-bottom: 35px;
+}
+#right-top{
+    text-align: right;
+}
+.mainName{
+    font-size: 50px;
+    font-weight: bolder;
+    font-style: italic;
+    padding : 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    color: #2D9BF0;
+}
+.subtitle{
+    font-size: 23px;
+    color: #2D9BF0;
+}
+.subtext{
+    margin-left: 15px;
+}
+.highlighting{
+    color:#FAC711;
+}
+.introtext{
+    margin-top: 24px;
+    margin-left: 20%;
+}
+.float-wrap{
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.profile{
+    margin-top: 60px;
+    border-radius: 15%;
+    width: 100%;
+    height: 60%;
+}
+.badges{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-rows: 40px 80px;
+    margin-bottom: 40px;
+}
+.sns-img{
+    margin-top: 16px;
+    margin-bottom : 25px;
+    width: 40px;
+    height: 40px;
+}
+#grade-badge{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+}
+.subtitle{
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 13px;
+}
+section{
+    margin-bottom: 20px;
+}
+#gallery-toggle{
+    display: grid;
+    grid-template-columns: 50px auto;
+    height : 70px;
+    align-items: center;
+    cursor: pointer; /* Make it obvious this is clickable */
+    transition: border-bottom 0.3s;
+}
+#gallery-toggle h2{
+    font-size: 34px;
+    font-weight: bolder;
+    margin: 0px;
+    margin-left: 15px;
+    padding: 5px;
+}
+#gallery-img{
+    float: left;
+    width : 50px;
+    height : 50px;
+}
+#gallery-toggle.expanded {
+    border-bottom: 1px solid black; /* Border appears after expanding */
+}
+.gallery-grid{
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+.cole {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cole img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.cole p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#mobile-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke; /* Set the background to whitesmoke */
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    line-height: 100vh; /* Vertical centering */
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it is on top of other content */
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+.backbtn{
+    text-align: right;
+}
+
+#back{
+    width: 100px;
+}
+
+</style>
+    <!-- <script type="module" src="js/firebaseLink.js"></script> -->
+    <script type="module">
+        // Firebase SDK 라이브러리 가져오기
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import {
+            addDoc,
+            collection,
+            getDocs,
+            getDoc,
+            getFirestore,
+            query,
+            where,
+            orderBy,
+            deleteDoc,
+            doc
+        } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+        // Firebase 구성 정보 설정
+        const firebaseConfig = {
+            apiKey: "AIzaSyDpcldklWh9hp-hLOkeO38vpsdTxXrRRoU",
+            authDomain: "sparta-samsungjo.firebaseapp.com",
+            projectId: "sparta-samsungjo",
+            storageBucket: "sparta-samsungjo.appspot.com",
+            messagingSenderId: "884455601062",
+            appId: "1:884455601062:web:17e0684ff0d5a9b21bd567",
+            measurementId: "G-LG33ZR3PVD"
+        };
+
+
+        // Firebase 인스턴스 초기화
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        // let docs = await getDocs(collection(db, localStorage.getItem('personID')));
+        let docs = await getDocs(collection(db, "박세미"));
+        docs.forEach((doc) => {
+
+            let row = doc.data();
+            
+                let profile = row['프로필사진']
+                let favorpic1 = row['관심사사진1']
+                let favorpic2 = row['관심사사진2']
+                let favorpic3 = row['관심사사진3']
+                let favorpic4 = row['관심사사진4']
+
+
+                let myline = row['한줄소개']
+                let myname = row['이름']
+                let myenname = row['영문이름']
+                let myintro = row['나의설명']
+                let mymbti = row['MBTI']
+                let myTogether = row['협업스타일']
+                let myGoods = row['나의장점']
+                let myblogurl = row['블로그주소']
+
+
+                let favor1 = row['관심사1']
+                let favor2 = row['관심사2']
+                let favor3 = row['관심사3']
+                let favor4 = row['관심사4']
+
+                let temp_html = `
+                <div id="main-content">
+            <!-- 프로필 이미지 -->
+            <section>
+                <img class="profile" src="${profile}">
+                <div class="badges">
+                    <div class="top-badges">
+                        <a href="https://github.com/tpal0719/samsungJo_sparta"><img class="sns-img"
+                                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></a>
+                        <a href="${myblogurl}"><img class="sns-img"
+                                src="https://blog.kakaocdn.net/dn/7AnVI/btqANDJtMYx/i2jxAyBwZWbzXSpRj3Vxz1/img.png"></a>
+                    </div>
+                    <img id="grade-badge"
+                        src="./img/star.jpg">
+                </div>
+            </section>
+
+            <!-- 자기소개 -->
+            <section>
+                <div>
+                    <div id="right-top">
+                        <h1 class="mainName script">${myenname}</h1>
+                        <h3 class="scriptKR">${myname}<span class="highlighting script"></span></h3>
+                    </div>
+
+                    <!-- 프로필 설명 -->
+                    <div class="script introtext">
+                        <div class="float-wrap">
+                            <p class="script subtitle">About myself</p>
+                            <p class="subtext scriptKR">${myintro}</p>
+                        </div>
+                        <div class="float-wrap">
+                            <p class="script subtitle">MBTI</p>
+                            <p class="subtext scriptKR">${mymbti}</p>
+                        </div>
+                        <div class="float-wrap">
+                            <p class="script subtitle">Personality</p>
+                            <p class="subtext scriptKR">${myGoods}</p>
+                        </div>
+                        <div class="float-wrap">
+                            <p class="script subtitle">BLOG</p>
+                            <p class="subtext scriptKR"><a
+                                    href="${myblogurl}">${myblogurl}</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 프로필 설명 -->
+                </div>
+            </section>
+            <!-- 자기소개 끝 -->
+        </div>
+        
+        <div class="backbtn" >
+            <a href="main.html"><img src="https://cdn-icons-png.freepik.com/512/8455/8455297.png" width=100px, height=100px ></a>
+        </div>
+
+        <section class="bottom-view">
+            <div class="galley-top" id="gallery-toggle">
+                <img id="gallery-img" src="./img/image.png">
+                <h2 class="script scriptKR">관심사 뭔뎅?</h2>
+            </div>
+
+            <div class="gallery-grid" id="gallery-content">
+                <!-- 관심사 이미지 -->
+                <div class="cole">
+                    <div>
+                        <img src="${favorpic1}" alt="관심사1">
+                        <p class="card-text scriptKR"> ${favor1}</p>
+                    </div>
+                </div>
+                <div class="cole">
+                    <div>
+                        <img src="${favorpic2}" alt="관심사2">
+                        <p class="card-text scriptKR"> ${favor2}</p>
+                    </div>
+                </div>
+                <div class="cole">
+                    <div>
+                        <img src="${favorpic3}" alt="관심사1">
+                        <p class="card-text scriptKR"> ${favor3}</p>
+                    </div>
+                </div>
+                <div class="cole">
+                    <div>
+                        <img src="${favorpic4}" alt="관심사1">
+                        <p class="card-text scriptKR"> ${favor4}</p>
+                    </div>
+                </div>
+                <!-- 관심사 이미지  끝 -->
+            </div>
+        </section>
+    </div>`
+                $('#card').append(temp_html);
+            })
+
+
+
+
+
+
+
+
+    </script>
+
+    <div type="plugun">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+KR&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Do+Hyeon&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Serif+KR&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./css/detail.css">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <title>detail</title>
+    </div>
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div id="mobile-warning">
+            This page is not for the mobile, Dude
+        </div>
+        <div id="card">
+
+        </div>
+        <div id="main-content">
+            
+        </div>
+
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const galleryToggle = document.getElementById('gallery-toggle');
+            const galleryContent = document.getElementById('gallery-content');
+            galleryToggle.addEventListener('click', function() {
+                // Toggle gallery visibility and border
+                if (galleryContent.style.display === 'grid') {
+                    galleryContent.style.display = 'none';
+                    galleryToggle.classList.remove('expanded');
+                } else {
+                    galleryContent.style.display = 'grid';
+                    galleryToggle.classList.add('expanded');
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const warningDiv = document.getElementById('mobile-warning');
+
+            function checkWindowSize() {
+                if (window.innerWidth < 768) { // Example threshold for mobile devices
+                    warningDiv.style.display = 'flex'; // Use 'flex' to enable better centering
+                    document.body.style.overflow = 'hidden'; // Optional: prevent scrolling
+                } else {
+                    warningDiv.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                }
+            }
+
+            // Check on resize and on load
+            window.addEventListener('resize', checkWindowSize);
+            checkWindowSize();
+        });
+    </script>
+
+</body>
+
+</html>
