@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+Han+Sans&family=Dancing+Script:wght@400.. 700&family=Do+Hyeon&family=동글&family=Hahmlet:wght@100.. 900&family=Jua&family=Kanit:이탈리아어,wght@0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 0,900; 1,100; 1,200; 1,300; 1,400; 1,500; 1,600; 1,700; 1,800; 1,900&family=Noto+Sans+KR:wght@100.. 900&family=열기+산: ital,wght@0,300..800; 1,300..800&family=단일+요일&가족=송+명&가족=택+원&디스플레이=스왑');
-
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+Han+Sans&family=Dancing+Script:wght@400..700&family=Do+Hyeon&family=Dongle&family=Hahmlet:wght@100..900&family=IBM+Plex+Sans+KR&family=Jua&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Micro+5+Charted&family=Noto+Sans+KR:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Single+Day&family=Song+Myung&family=Tac+One&display=swap');
 
 body, ul, h2, p {
     margin: 0;
@@ -35,9 +35,11 @@ body {
     left: 50%;
     transform: translate(-50%, -220%);
     color: white;
-    font-size: 24px;
-    font-weight: bold;
+   width: 600px;
     text-align: center;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .team-h2 {
@@ -179,8 +181,6 @@ body {
 
 
 }
-
-
 
 
 
