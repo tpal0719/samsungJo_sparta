@@ -8,19 +8,29 @@
     <link rel="stylesheet" href="css/heder.css">
 </head>
 <body>
+<audio autoplay>
+    <source src="intro.mp3" type="audio/mpeg">
+    Your browser does not support the audio
+</audio>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var audio = document.getElementById("bgMusic");
+      audio.play();
+    });
+</script>
     <div class="container">
         <div class="S-logo">
+            <a href="index_b.html">
             <img src="img/S.png" alt="S Logo" class="bounce">
+            </a>
         </div>
-        <a href="index.html">
-        <div>
+           <div>
             <span class="font">3</span>
             <span class="font">조</span>
-        </div>
-        <div class="SAMSUNG-logo">
+           </div>
+            <div class="SAMSUNG-logo">
             <img src="img/Samsung.png" alt="SANSUNG logo" class="logo">
-        </div>
-        </a>
+            </div>
     </div>
 </body>
 </html>
