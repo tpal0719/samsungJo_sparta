@@ -35,7 +35,7 @@ body {
     left: 50%;
     transform: translate(-50%, -220%);
     color: white;
-   width: 600px;
+    width: 600px;
     text-align: center;
     font-family: "Jua", sans-serif;
     font-weight: 400;
@@ -49,10 +49,9 @@ body {
     transform: translate(-50%, 100%);
     color: #00498c;
     font-size: 24px;
-
     text-align: center;
     color: rgba(0, 0, 0, 0.82);
-    font-family: "Song Myung", serif;
+    font-family: "Jua", sans-serif;
     font-weight: 800;
     font-style: normal;
 }
@@ -71,6 +70,7 @@ body {
 }
 
 .team-item {
+    font-family: "Jua", sans-serif;
     flex-basis: 160px;
     flex-shrink: 0;
     margin: 5px;
@@ -91,12 +91,12 @@ body {
 .team-item1 img {
     width: 100%;
 }
-
+#card-img{
+    border-radius: 10%;
+}
 .profile {
-    background-color: #222;
     position: relative;
     overflow: hidden;
-
 }
 
 .profile:before {
@@ -110,9 +110,7 @@ body {
     right: 0;
     bottom: 0;
     height: 235px;
-    border: 5px solid rgba(204, 14, 14, 0.94);
-    border-radius: 20px 10%;
-
+    border-radius: 15%;
 }
 
 .profile_red {
@@ -177,11 +175,12 @@ body {
 }
 
 
-.card-img{background-size: cover;
-
-
+#context{
+    margin-top: 20px;
 }
-
+#main-title{
+    font-size : 42px;
+}
 
 
 
