@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+Han+Sans&family=Dancing+Script:wght@400.. 700&family=Do+Hyeon&family=동글&family=Hahmlet:wght@100.. 900&family=Jua&family=Kanit:이탈리아어,wght@0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 0,900; 1,100; 1,200; 1,300; 1,400; 1,500; 1,600; 1,700; 1,800; 1,900&family=Noto+Sans+KR:wght@100.. 900&family=열기+산: ital,wght@0,300..800; 1,300..800&family=단일+요일&가족=송+명&가족=택+원&디스플레이=스왑');
+
+
 body, ul, h2, p {
     margin: 0;
     padding: 0;
@@ -21,10 +24,10 @@ body {
     width: 100%;
 }
 
- .main-container {
+.main-container {
     position: relative;
     display: inline-block;
-  }
+}
 
 .overlay-text {
     position: absolute;
@@ -35,7 +38,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-  }
+}
 
 .team-h2 {
     position: absolute;
@@ -44,8 +47,12 @@ body {
     transform: translate(-50%, 100%);
     color: #00498c;
     font-size: 24px;
-    font-weight: bold;
+
     text-align: center;
+    color: rgba(0, 0, 0, 0.82);
+    font-family: "Song Myung", serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .wrapper {
@@ -91,10 +98,10 @@ body {
 
 .profile:before {
     content: ' ';
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%);
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 );
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#f2000000', GradientType=0);
     position: absolute;
     left: 0;
     right: 0;
