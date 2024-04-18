@@ -1,0 +1,32 @@
+.col {
+    text-align: center;
+}
+
+.col-4 {
+    text-align: center;
+    margin-top: 20px;
+
+
+}
+
+#fa1 {
+    margin: 50px 100px auto auto;
+}
+
+#fa2 {
+    margin: 50px auto auto 100px;
+}
+
+#fa3 {
+    margin: 50px 100px auto auto;
+}
+
+#fa4 {
+    margin: 50px auto auto 100px;
+}
+
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
