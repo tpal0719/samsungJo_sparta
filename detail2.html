@@ -38,7 +38,7 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         // let docs = await getDocs(collection(db, localStorage.getItem('personID')));
-        let docs = await getDocs(collection(db, "박세미"));
+        let docs = await getDocs(collection(db, "이인빈"));
         docs.forEach((doc) => {
 
             let row = doc.data();
@@ -181,7 +181,7 @@
         </div>
 
         <div class="backbtn">
-            <a href="main.html"><img src="https://cdn-icons-png.freepik.com/512/8455/8455297.png" width=100px,
+            <a href="index.html"><img src="https://cdn-icons-png.freepik.com/512/8455/8455297.png" width=100px,
                     height=100px></a>
         </div>
 
