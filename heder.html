@@ -6,6 +6,17 @@
     <link rel="icon" href="img/S.png">
     <title>3조 SAMSUNG</title>
     <link rel="stylesheet" href="css/heder.css">
+    <style>
+        /* 전체 페이지에 적용할 페이드 효과 */
+        .fade-enter, .fade-exit-active {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-enter-active, .fade-exit {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
 </head>
 <body>
 <audio autoplay>
@@ -32,5 +43,31 @@
             <img src="img/Samsung.png" alt="SANSUNG logo" class="logo">
             </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // 페이지 로드 완료 시 바로 페이드 인 시작
+        document.body.classList.add("fade-enter");
+        setTimeout(() => {
+            document.body.classList.add("fade-enter-active");
+            document.body.classList.remove("fade-enter");
+        }, 10);  // 약간의 지연 후 페이드 인
+    
+        // 모든 링크 클릭 시 페이드 아웃
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();  // 기본 링크 동작 방지
+                const href = this.href;  // 이동할 URL 저장
+    
+                // 페이드 아웃 시작
+                document.body.classList.add("fade-exit");
+                setTimeout(() => {
+                    document.body.classList.add("fade-exit-active");
+                    document.body.classList.remove("fade-exit");
+                    window.location.href = href;  // 애니메이션 완료 후 페이지 이동
+                }, 500);  // CSS 애니메이션의 지속 시간과 일치
+            });
+        });
+    });
+    </script>
 </body>
 </html>
