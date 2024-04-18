@@ -161,3 +161,10 @@ section{
     font-size: 20px; /* Adjust the font size as needed */
 }
 
+.backbtn{
+    text-align: right;
+}
+
+#back{
+    width: 100px;
+}
