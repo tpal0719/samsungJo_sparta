@@ -38,7 +38,7 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         // let docs = await getDocs(collection(db, localStorage.getItem('personID')));
-        let docs = await getDocs(collection(db, "박세미"));
+        let docs = await getDocs(collection(db, "이인빈"));
         docs.forEach((doc) => {
 
             let row = doc.data();
