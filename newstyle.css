@@ -12,11 +12,45 @@ body {
     font-weight:400;
     font-style: normal;
 }
+.script-1{
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight:400;
+    font-style: normal;
+    color: #F870C8;
+}
 
 .scriptKR{
     font-family: "Do Hyeon", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+.scriptKR-1 {
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F870C8;
+
+}
+.scriptKR-2 {
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #808080;
+
+}
+.scriptKR-4 {
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #DDCCEE;
+
+}
+.scriptKR-5 {
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #90D14F;
+
 }
 
 #wrapper{
@@ -44,9 +78,73 @@ body {
     margin-bottom: 15px;
     color: #2D9BF0;
 }
+.mainName-1{
+    font-size: 50px;
+    font-weight: bolder;
+    font-style: italic;
+    padding : 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    color: #F870C8;
+}
+.mainName-2{
+    font-size: 50px;
+    font-weight: bolder;
+    font-style: italic;
+    padding : 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    color: #808080;
+}
+.mainName-4{
+    font-size: 50px;
+    font-weight: bolder;
+    font-style: italic;
+    padding : 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    color: #DDCCEE;
+}
+.mainName-5{
+    font-size: 50px;
+    font-weight: bolder;
+    font-style: italic;
+    padding : 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    color: #90D14F;
+}
 .subtitle{
     font-size: 23px;
     color: #2D9BF0;
+}
+.subtitle-1{
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    font-size: 23px;
+    color:  #F870C8;
+}
+.subtitle-2{
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    font-size: 23px;
+    color: #808080;
+}
+.subtitle-4{
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    font-size: 23px;
+    color: #DDCCEE;
+}
+.subtitle-5{
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    font-size: 23px;
+    color: #90D14F;
 }
 .subtext{
     margin-left: 15px;
@@ -166,4 +264,7 @@ section{
 
 #back{
     width: 100px;
+}
+#comment-list {
+    margin-top: 10px;
 }

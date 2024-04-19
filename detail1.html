@@ -6,6 +6,7 @@
     <title>팀원 소개 페이지</title>
     <link rel="stylesheet" href="/Users/leejungbin/Downloads/samsungJo_sparta/detatil 페이지 style 페이지 모아둔 곳/newStyle.css">
     <!-- <script type="module" src="js/firebaseLink.js"></script> -->
+
     <script type="module">
         // Firebase SDK 라이브러리 가져오기
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
@@ -95,24 +96,35 @@
         })
 
 
-        
+
     </script>
 
     <div type="plugun">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+KR&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Do+Hyeon&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Serif+KR&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+KR&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Do+Hyeon&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Serif+KR&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="newStyle.css">
-    
+
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
         <title>detail</title>
     </div>
 
@@ -143,26 +155,33 @@
             <section>
                 <div>
                     <div id="right-top">
-                        <h1 class="mainName script"><span id="myenname"></span></h1>
+                        <h1 class="mainName-1 scriptKR">
+                            <span id="myenname"></span>
+                        </h1>
                         <h3 class="scriptKR"><span id="myname"></span><span class="highlighting script"></span></h3>
                     </div>
 
                     <!-- 프로필 설명 -->
                     <div class="script introtext">
                         <div class="float-wrap">
-                            <p class="script subtitle">About myself</p>
+                            <p class="script subtitle-1">
+                                About myself
+                            </p>
                             <p class="subtext scriptKR"><span id="myintro"></span></p>
                         </div>
                         <div class="float-wrap">
-                            <p class="script subtitle">MBTI</p>
+                            <p class="script subtitle-1">MBTI
+                            </p>
                             <p class="subtext scriptKR"><span id="mymbti"></span></p>
                         </div>
                         <div class="float-wrap">
-                            <p class="script subtitle">Personality</p>
+                            <p class="script subtitle-1">Personality
+                            </p>
                             <p class="subtext scriptKR"><span id="myGoods"></span><span id="myTogether"></span></p>
                         </div>
                         <div class="float-wrap">
-                            <p class="script subtitle">BLOG</p>
+                            <p class="script subtitle-1">BLOG
+                            </p>
                             <p class="subtext scriptKR"><a href="${myblogurl}"><span id="myblogurl"></span></a>
                             </p>
                         </div>
@@ -181,7 +200,9 @@
         <section class="bottom-view">
             <div class="galley-top" id="gallery-toggle">
                 <img id="gallery-img" src="./img/image.png">
-                <h2 class="script scriptKR">관심사 뭔뎅?</h2>
+                <h2 class="script scriptKR-1">
+                    관심사 뭔뎅?</span>
+                </h2>
             </div>
 
             <div class="gallery-grid" id="gallery-content">
