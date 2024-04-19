@@ -1,10 +1,11 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/S.png">
     <title>3조 SAMSUNG</title>
-    <link rel="stylesheet" href="index_b.css">
+    <link rel="stylesheet" href="css/heder.css">
     <style>
         /* 전체 페이지에 적용할 페이드 효과 */
         .fade-enter, .fade-exit-active {
@@ -18,107 +19,55 @@
     </style>
 </head>
 <body>
-<div class="main-container">
-    <img src="img/main.png" alt="Main images" class="main">
-    <div class="overlay-text">
-        <h2 id = "main-title">3조 SAMSUNG</h2>
-        <p id = "context">Team Dolphin을 만나보세요! 우리는 열정과 혁신을 바탕으로 한 팀으로, <br>돌고래처럼 지능적이고 사교적인 성격을 가지고 있습니다.<br> 재미있는 팀원들과 함께 책임감 있게 모든 프로젝트를 진행하면서도 유쾌함을 잃지 않죠.<br>
-            창의력과 최신 기술을 활용해 즐거운 도전을 계속해서 맞이하고 있습니다.</p>
-    </div>
-    <div class="team-h2">
-        팀원 소개
-    </div>
-    <div class="wrapper">
-        <ul class="team">
-            <li class="team-item">
-                <a href="detail1.html">
-                    <div class="profile profile_red">
-                        <img id="card-img" src="img/semi.png">
-                        <div class="profile-contents">
-                            <h2>박세미 <span>팀장</span></h2>
-                            <p>
-                                !!!! 취업하자 !!!!</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="team-item">
-                <a href="detail5.html">
-                    <div class="profile profile_beige">
-                        <img id="card-img" src="img/pingu.jpg">
-                        <div class="profile-contents">
-                            <h2>김민규 <span>팀원</span></h2>
-                            <p>
-                                안녕하세요! 점진적인 성장을 위해서 열심히 배우겠습니다 !!</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="team-item">
-                <a href="detail4.html">
-                    <div class="profile profile_green">
-                        <img id ="card-img" src="img/luel1197.png">
-                        <div class="profile-contents">
-                            <h2>손아엘 <span>팀원</span></h2>
-                            <p>
-                                돌다리도 두들겨보다가 부셔 먹는 슈퍼 J 입니다. 안전 제일 <p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="team-item">
-                <a href="detail2.html" target="_blank">
-                    <div class="profile profile_pink">
-                        <img id="card-img" src="img/B.png">
-                        <div class="profile-contents">
-                            <h2>이인빈 <span>팀원</span></h2>
-                            <p>
-                                백엔드 개발자가 되고 싶은 <br>"비전공자" 뉴비입니다.</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="team-item">
-                <a href="detail3.html">
-                    <div class="profile profile_purple">
-                        <img id ="card-img" src="img/jake.jpg">
-                        <div class="profile-contents">
-                            <h2>이정빈 <span>팀원</span></h2>
-                            <p>
-                                안녕하세요! 백엔드 개발자가 되고픈 이정빈입니다. </p>
-                            <p>조금 내향적이지만, 친구만드는거 좋아합니다! 같이 프로젝트하면서 훌륭한 개발자가 되어봐요!</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
+<audio autoplay>
+    <source src="intro.mp3" type="audio/mpeg">
+    Your browser does not support the audio
+</audio>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-    // 페이지 로드 완료 시 바로 페이드 인 시작
-    document.body.classList.add("fade-enter");
-    setTimeout(() => {
-        document.body.classList.add("fade-enter-active");
-        document.body.classList.remove("fade-enter");
-    }, 10);  // 약간의 지연 후 페이드 인
-
-    // 모든 링크 클릭 시 페이드 아웃
-    document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();  // 기본 링크 동작 방지
-            const href = this.href;  // 이동할 URL 저장
-
-            // 페이드 아웃 시작
-            document.body.classList.add("fade-exit");
-            setTimeout(() => {
-                document.body.classList.add("fade-exit-active");
-                document.body.classList.remove("fade-exit");
-                window.location.href = href;  // 애니메이션 완료 후 페이지 이동
-            }, 500);  // CSS 애니메이션의 지속 시간과 일치
+      var audio = document.getElementById("bgMusic");
+      audio.play();
+    });
+</script>
+    <div class="container">
+        <div class="S-logo">
+            <a href="main.html">
+            <img src="img/S.png" alt="S Logo" class="bounce">
+            </a>
+        </div>
+           <div>
+            <span class="font">3</span>
+            <span class="font">조</span>
+           </div>
+            <div class="SAMSUNG-logo">
+            <img src="img/Samsung.png" alt="SANSUNG logo" class="logo">
+            </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // 페이지 로드 완료 시 바로 페이드 인 시작
+        document.body.classList.add("fade-enter");
+        setTimeout(() => {
+            document.body.classList.add("fade-enter-active");
+            document.body.classList.remove("fade-enter");
+        }, 10);  // 약간의 지연 후 페이드 인
+    
+        // 모든 링크 클릭 시 페이드 아웃
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();  // 기본 링크 동작 방지
+                const href = this.href;  // 이동할 URL 저장
+    
+                // 페이드 아웃 시작
+                document.body.classList.add("fade-exit");
+                setTimeout(() => {
+                    document.body.classList.add("fade-exit-active");
+                    document.body.classList.remove("fade-exit");
+                    window.location.href = href;  // 애니메이션 완료 후 페이지 이동
+                }, 500);  // CSS 애니메이션의 지속 시간과 일치
+            });
         });
     });
-});
-</script>
+    </script>
 </body>
 </html>
