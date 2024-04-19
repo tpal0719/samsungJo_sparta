@@ -95,6 +95,47 @@
 
         })
 
+        let docs1 = await getDocs(collection(db, "comment"));
+        docs1.forEach((doc) => {
+
+
+            let row = doc.data();
+            if (row['personID'] == '박세미') {
+                let name = row['name'];
+                let contents = row['contents'];
+
+                console.log(name + contents)
+
+                let temp_html = `
+            <div class="float-wrap">
+                            <p class="subtext scriptKR">${name}</p>
+                            <p class="subtext scriptKR">　　　　　${contents}</p>
+                            <hr width='80%' color=#BDBDBD noshade />
+                            </div>`
+
+                $('#comment-list').append(temp_html);
+            }
+
+
+        });
+
+        $("#submit").click(async function () {
+            let name = $('#comment-id').val();
+            let contents = $('#comment-input').val();
+
+            let doc1 = {
+                'personID': '박세미',
+                'name': name,
+                'contents': contents,
+            };
+
+
+            await addDoc(collection(db, "comment"), doc1);
+            alert('저장 완료!');
+            window.location.reload();
+        });
+
+
 
 
     </script>
@@ -234,8 +275,26 @@
                 <!-- 관심사 이미지  끝 -->
             </div>
         </section>
-    </div>
+        
+        <hr width='100%' color=black noshade />
+        　
+        <img id="gallery-img" src="./img/commentImg.png"><h2 class="script scriptKR-1">댓글</h2>
+         <!-- 댓글 -->
+         <div id="form-commentInfo">
+            <input id="comment-id" placeholder="이름 입력">
+            <input id="comment-input" placeholder="댓글을 입력해 주세요.">
+            <button id="submit" type="button">등록</button>
+            <div class="personID"> </div>
+        </div>
 
+        
+
+        <div id="comment-list">
+        </div>
+        <!-- 댓글 끝 -->
+    </div>
+   
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {

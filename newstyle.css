@@ -38,6 +38,13 @@ body {
     color: #808080;
 
 }
+.scriptKR-3 {
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2D9BF0;
+
+}
 .scriptKR-4 {
     font-family: "Do Hyeon", sans-serif;
     font-weight: 400;
@@ -95,6 +102,18 @@ body {
     margin: 0px;
     margin-bottom: 15px;
     color: #808080;
+    
+
+}
+.mainName-3{
+    font-size: 50px;
+    font-weight: bolder;
+    font-style: italic;
+    padding : 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    color: #2D9BF0;
+    
 }
 .mainName-4{
     font-size: 50px;
@@ -132,6 +151,14 @@ body {
     font-size: 23px;
     color: #808080;
 }
+
+.subtitle-3{
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    font-size: 23px;
+    color: #2D9BF0;
+}
 .subtitle-4{
     font-weight: bolder;
     margin-top: 20px;
@@ -160,6 +187,11 @@ body {
     overflow: hidden;
     margin-bottom: 15px;
 }
+.float-wrap-comment{
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
 .profile{
     margin-top: 60px;
     border-radius: 15%;
@@ -268,3 +300,44 @@ section{
 #comment-list {
     margin-top: 10px;
 }
+
+
+#form-commentInfo{
+    width: 100%;
+}
+
+#comment-count{
+    margin-bottom: 10px; 
+}
+
+#comment-input{
+    width: 50%;
+    height: 3.3em;
+}
+
+#comment-id{
+    width: 10%;
+    height: 3.3em;
+}
+
+
+
+#submit{
+    background-color: black;
+    width: 5.5em;
+    height: 3.3em;;
+    font-size: 15px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#voteUp, #voteDown{
+    width: 3.5em;
+    height: 1.9em;
+    background-color: aqua;    
+}
+
+#comments{
+    margin-top: 10px;
+}
+
